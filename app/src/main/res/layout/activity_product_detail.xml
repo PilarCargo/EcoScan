@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <!-- LinearLayout vertical para agrupar todo o conteúdo -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Barra superior (botão de voltar + texto) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Ícone para voltar (pode ser um ImageView com drawable de flecha) -->
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="Back button"
+                android:src="@drawable/ic_home_black_24dp" />
+
+            <!-- Espaço horizontal pequeno -->
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="wrap_content" />
+
+            <!-- Texto "Retornar" -->
+            <TextView
+                android:id="@+id/tvReturn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Retornar"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Espaço vertical pequeno -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <!-- Imagem do produto -->
+        <ImageView
+            android:id="@+id/ivProduct"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/produit_lait"
+        />
+
+        <!-- Nome do produto -->
+        <TextView
+            android:id="@+id/tvProductName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome do produto"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Produtor ou marca -->
+        <TextView
+            android:id="@+id/tvBrand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Produtor ou Marca"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Avaliação (ex: 5/10) -->
+        <TextView
+            android:id="@+id/tvRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5/10"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_orange_dark"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Descrição do produto -->
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A descrição do produto aqui..."
+            android:textSize="14sp"
+            android:layout_marginTop="8dp" />
+
+        <!-- Título: Certificações -->
+        <TextView
+            android:id="@+id/tvCertifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Certificações"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Linha com ícones de certificações -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/ivTriLogo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/label_triman"
+            android:contentDescription="Triman" />
+
+            <Space
+                android:layout_width="16dp"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/ivFranceLogo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/label_france"
+                android:contentDescription="Origine en France" />
+        </LinearLayout>
+
+        <!-- Título: Classificação -->
+        <TextView
+            android:id="@+id/tvClassification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Classificação"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Nota ou Estrelas -->
+        <TextView
+            android:id="@+id/tvClassificationRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5/10"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_orange_dark"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Explicação da classificação -->
+        <TextView
+            android:id="@+id/tvClassificationExplanation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Breve explicação de por que o produto tem essa classificação."
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Título: Informação Nutricional -->
+        <TextView
+            android:id="@+id/tvNutritionalInfoTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Informação Nutricional"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Detalhes da informação nutricional -->
+        <TextView
+            android:id="@+id/tvNutritionalInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aqui você insere dados sobre calorias, ingredientes, etc."
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Espaço extra no final para rolagem ficar mais confortável -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="32dp" />
+
+    </LinearLayout>
+</ScrollView>
